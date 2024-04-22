@@ -72,76 +72,13 @@
                 </div>
                 <!-- CONTACT-LIST -->
                 <div class="contact">
-                    <div class="user white">
+                    <div v-for="(element, index) in contacts" class="user white">
                         <div class="box-img">
-                            <img src="./img/avatar_1.jpg" alt="foto profilo" class="profile-photo">
+                            <img :src="contacts[index].profilePhoto" alt="foto profilo" class="profile-photo">
                         </div>
                         <div class="preview-chat">
-                            <h4><strong>Michele</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_2.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Fabio</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_3.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Samuele</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_4.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Alessandro B.</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_5.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Alessandro L.</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_6.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Claudia</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_7.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Federico</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
-                        </div>
-                    </div>
-                    <div class="user white">
-                        <div class="box-img">
-                            <img src="./img/avatar_8.jpg" alt="foto profilo" class="profile-photo">
-                        </div>
-                        <div class="preview-chat">
-                            <h4><strong>Davide</strong></h4>
-                            <span class="size g-text">lorem ipsum sit amet</span>
+                            <h4><strong> {{contacts[index].name}} </strong></h4>
+                            <span class="size g-text"> {{contacts[index].preview}} </span>
                         </div>
                     </div>
                 </div>
