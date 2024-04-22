@@ -5,51 +5,51 @@ createApp({
         return {
             contacts: [
                 {
-                    name:"Michele",
+                    name:"Waltere",
                     profilePhoto:"./img/avatar_1.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
-                    name:"Fabio",
+                    name:"Luca Giardina",
                     profilePhoto:"./img/avatar_2.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
-                    name:"Samuele",
+                    name:"Simone Bonvecchio",
                     profilePhoto:"./img/avatar_3.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
-                    name:"Alessandro B",
+                    name:"Berlusconi",
                     profilePhoto:"./img/avatar_4.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
                     name:"Loris Barbiero",
                     profilePhoto:"./img/avatar_5.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
-                    name:"Simone Bonvecchio",
+                    name:"Olga Demina",
                     profilePhoto:"./img/avatar_6.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
-                    name:"Federico",
+                    name:"Vittorio Sgarbi",
                     profilePhoto:"./img/avatar_7.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 },
                 {
-                    name:"Davide",
+                    name:"Balotelli",
                     profilePhoto:"./img/avatar_8.jpg",
-                    preview: "lorem ipsum sit amet",
+                    message: "Apri un ticket, oppure studia per battere Loris a scacchi"
                 }
             ]
-
-            
         }
     },
     methods: {
-
+        selectedChat(index) {
+            
+        }
     }
 }).mount(".viewport")

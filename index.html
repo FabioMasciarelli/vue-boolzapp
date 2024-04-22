@@ -72,7 +72,7 @@
                 </div>
                 <!-- CONTACT-LIST -->
                 <div class="contact">
-                    <div v-for="(element, index) in contacts" class="user white">
+                    <div v-for="(element, index) in contacts" class="user white" @click="selectedChat">
                         <div class="box-img">
                             <img :src="contacts[index].profilePhoto" alt="foto profilo" class="profile-photo">
                         </div>
@@ -92,7 +92,6 @@
                     </div>
                     <div class="profile">
                         <h4><strong>Michele</strong></h4>
-                        <span class="size g-text">Ultimo accesso oggi alle 16:26</span>
                     </div>
                     <div class="action-profile">
                         <ul class="flex">
@@ -136,7 +135,6 @@
                             Soluta at cumque iusto quibusdam cupiditate a? Autem dicta dolor excepturi hic minus?
                             Consequuntur amet, rem sed assumenda impedit ut quos aliquam neque, pariatur nam reiciendis
                             voluptates eum nobis dolorem.
-
                         </div>
                     </span>
                     <span class="msg received">

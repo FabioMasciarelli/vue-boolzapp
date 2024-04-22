@@ -8,6 +8,7 @@
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 ul {
@@ -195,7 +196,7 @@ header {
 .box-profile {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     width: 10%;
     aspect-ratio: 1;
 }
@@ -243,7 +244,6 @@ footer {
     align-items: center;
     height: 50px;
     width: 100%;
-    background-color: #f3eeea;
 }
 
 .digit-space {
