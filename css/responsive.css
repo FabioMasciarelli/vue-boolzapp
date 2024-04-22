@@ -1,0 +1,50 @@
+/* TABLET */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .action ,
+    .notifications ,
+    .search ,
+    .preview-chat {
+        display: none;
+    }
+
+    .interaction {
+        width: 10%;
+    }
+
+    .box-img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .profile-photo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        aspect-ratio: 1;
+    }
+
+    .chat {
+        width: 90%;
+    }
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 480px) {
+    
+    .interaction {
+        display: none;
+    }
+
+    .chat {
+        width: 100%;
+    }
+}

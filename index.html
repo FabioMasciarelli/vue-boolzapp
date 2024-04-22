@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Boolzapp</title>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="container">
+            <!-- FIRST-COL -->
+            <div class="interaction white">
+                <!-- HEADER -->
+                <header>
+                    <div class="box-img">
+                        <img src="./img/avatar_io.jpg" alt="foto profilo" class="profile-photo">
+                    </div>
+                    <div class="action">
+                        <ul class="flex">
+                            <li>
+                                <button>
+                                    <i class="fa-solid fa-circle-notch g-text"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <i class="fa-solid fa-message g-text"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <i class="fa-solid fa-ellipsis-vertical g-text"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </header>
+                <!-- NOTIFICATIONS -->
+                <div class="notifications">
+                    <div class="twenty">
+                        <i class="fa-solid fa-bell-slash white" id="bell"></i>
+                    </div>
+                    <div class="eighty">
+                        <h4><strong class="size">Ricevi notifiche di nuovi messaggi</strong></h4>
+                        <a href="" class="size">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- SEARCH-BAR -->
+                <div class="search">
+                    <div class="bar">
+                        <i class="fa-solid fa-magnifying-glass g-text size white"></i>
+                        <input type="text" aria-label="search-contact" placeholder="Cerca o inizia una nuova chat"
+                            class="size t-area">
+                    </div>
+                </div>
+                <!-- CONTACT-LIST -->
+                <div class="contact">
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_1.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Michele</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_2.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Fabio</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_3.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Samuele</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_4.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Alessandro B.</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_5.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Alessandro L.</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_6.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Claudia</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_7.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Federico</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                    <div class="user white">
+                        <div class="box-img">
+                            <img src="./img/avatar_8.jpg" alt="foto profilo" class="profile-photo">
+                        </div>
+                        <div class="preview-chat">
+                            <h4><strong>Davide</strong></h4>
+                            <span class="size g-text">lorem ipsum sit amet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SECOND-COL -->
+            <div class="chat">
+                <!-- HEADER -->
+                <header>
+                    <div class="box-profile">
+                        <img src="./img/avatar_1.jpg" alt="foto profilo" class="profile-photo">
+                    </div>
+                    <div class="profile">
+                        <h4><strong>Michele</strong></h4>
+                        <span class="size g-text">Ultimo accesso oggi alle 16:26</span>
+                    </div>
+                    <div class="action-profile">
+                        <ul class="flex">
+                            <li>
+                                <button>
+                                    <i class="fa-solid fa-magnifying-glass g-text size2"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <i class="fa-brands fa-squarespace g-text size2"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <i class="fa-solid fa-ellipsis-vertical g-text size2"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="message">
+                    <span class="msg received">
+                        <div class="absolute">
+                            <button><i class="fa-solid fa-chevron-down"></i></button>
+                        </div>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint suscipit, officiis
+                            earum, excepturi voluptatem vitae quasi dolores nam eveniet eaque cupiditate neque aliquam
+                            molestiae a iure amet doloremque quam.
+                        </div>
+                    </span>
+                    <span class="msg sended">
+                        <div class="absolute">
+                            <button><i class="fa-solid fa-chevron-down"></i></button>
+                        </div>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum
+                            facilis beatae quidem aliquam repellat? Repudiandae minus facilis eius aut quae ab porro.
+                            Tempore eum, consequuntur iste adipisci praesentium maiores!
+                            Soluta at cumque iusto quibusdam cupiditate a? Autem dicta dolor excepturi hic minus?
+                            Consequuntur amet, rem sed assumenda impedit ut quos aliquam neque, pariatur nam reiciendis
+                            voluptates eum nobis dolorem.
+
+                        </div>
+                    </span>
+                    <span class="msg received">
+                        <div class="absolute">
+                            <button><i class="fa-solid fa-chevron-down"></i></button>
+                        </div>
+                        <div>Lorem</div>
+                    </span>
+                </div>
+                <footer>
+                    <button><i class="fa-regular fa-face-smile size2 g-text"></i></button>
+                    <input type="text" placeholder="Scrivi un messaggio" aria-label="message" class="digit-space">
+                    <button><i class="fa-solid fa-microphone size2 g-text"></i></button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
