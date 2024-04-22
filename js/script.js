@@ -5,7 +5,11 @@ createApp({
         return {
             contacts,
             curChat: 0,
-            sent:"",
+            sent: {
+                date: '10/01/2020 16:15:22',
+                message: '',
+                status: 'sent'
+            }
         }
     },
     methods: {
@@ -14,8 +18,17 @@ createApp({
             this.curChat = index;
         },
         
-        send(index) {
-            
+        send() {
+            if(this.sent.message !== "") {
+                console.log(this.sent);
+                const result = {...this.sent}
+                console.log(result);
+                this.messages.push(result);
+                console.log(this.messages);
+                this.sent.messages = "";
+            } else {
+                console.log("non ci sono messaggi");
+            }
         }
     }
 }).mount(".viewport")
