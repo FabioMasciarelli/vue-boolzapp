@@ -72,13 +72,13 @@
                 </div>
                 <!-- CONTACT-LIST -->
                 <div class="contact">
-                    <div v-for="(element, index) in contacts" class="user white" @click="selectedChat">
+                    <div v-for="(element, index) in contacts" class="user white" @click="selectedChat(index)">
                         <div class="box-img">
-                            <img :src="contacts[index].profilePhoto" alt="foto profilo" class="profile-photo">
+                            <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'" alt="foto profilo" class="profile-photo">
                         </div>
                         <div class="preview-chat">
-                            <h4><strong> {{contacts[index].name}} </strong></h4>
-                            <span class="size g-text"> {{contacts[index].preview}} </span>
+                            <h4><strong> {{ contacts[index].name }} </strong></h4>
+                            <span class="size g-text"> {{ contacts[index].preview }} </span>
                         </div>
                     </div>
                 </div>
@@ -88,10 +88,10 @@
                 <!-- HEADER -->
                 <header>
                     <div class="box-profile">
-                        <img src="./img/avatar_1.jpg" alt="foto profilo" class="profile-photo">
+                        <img :src="'./img/avatar' + contacts[curChat].avatar + '.jpg'" alt="foto profilo" class="profile-photo">
                     </div>
                     <div class="profile">
-                        <h4><strong>Michele</strong></h4>
+                        <h4><strong>{{ contacts[curChat].name }}</strong></h4>
                     </div>
                     <div class="action-profile">
                         <ul class="flex">
@@ -114,34 +114,11 @@
                     </div>
                 </header>
                 <div class="message">
-                    <span class="msg received">
+                    <span v-for ="messages in messages" class="msg" :class="contacts[curChat].messages[curChat].status === sent ? 'sent' : 'received'">
                         <div class="absolute">
                             <button><i class="fa-solid fa-chevron-down"></i></button>
                         </div>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint suscipit, officiis
-                            earum, excepturi voluptatem vitae quasi dolores nam eveniet eaque cupiditate neque aliquam
-                            molestiae a iure amet doloremque quam.
-                        </div>
-                    </span>
-                    <span class="msg sended">
-                        <div class="absolute">
-                            <button><i class="fa-solid fa-chevron-down"></i></button>
-                        </div>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum
-                            facilis beatae quidem aliquam repellat? Repudiandae minus facilis eius aut quae ab porro.
-                            Tempore eum, consequuntur iste adipisci praesentium maiores!
-                            Soluta at cumque iusto quibusdam cupiditate a? Autem dicta dolor excepturi hic minus?
-                            Consequuntur amet, rem sed assumenda impedit ut quos aliquam neque, pariatur nam reiciendis
-                            voluptates eum nobis dolorem.
-                        </div>
-                    </span>
-                    <span class="msg received">
-                        <div class="absolute">
-                            <button><i class="fa-solid fa-chevron-down"></i></button>
-                        </div>
-                        <div>Lorem</div>
+                        <div>{{ contacts[curChat].messages[curChat].message }}</div>
                     </span>
                 </div>
                 <footer>
@@ -152,6 +129,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/data.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
