@@ -65,14 +65,14 @@
                 <!-- SEARCH-BAR -->
                 <div class="search">
                     <div class="bar">
-                        <i class="fa-solid fa-magnifying-glass g-text size white"></i>
+                        <i class="fa-solid fa-magnifying-glass g-text size white" @click="finder"></i>
                         <input type="text" aria-label="search-contact" placeholder="Cerca o inizia una nuova chat"
-                            class="size t-area">
+                            class="size t-area" v-model="search">
                     </div>
                 </div>
                 <!-- CONTACT-LIST -->
                 <div class="contact">
-                    <div v-for="(element, index) in contacts" class="user white" @click="selectedChat(index)">
+                    <div v-for="(element, index) in contacts" class="user white" @click="selectedChat(index)" v-show="visible">
                         <div class="box-img">
                             <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'" alt="foto profilo" class="profile-photo">
                         </div>
