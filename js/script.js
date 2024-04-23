@@ -9,6 +9,11 @@ createApp({
                 date: '10/01/2020 16:15:22',
                 message: '',
                 status: 'sent'
+            },
+            received: {
+                date: '10/01/2020 16:15:22',
+                message: 'non lo so, apri un ticket',
+                status: 'received'
             }
         }
     },
@@ -17,20 +22,28 @@ createApp({
             console.log(index);
             this.curChat = index;
         },
-        
+
         send() {
-            if(this.sent.message !== "") {
-                console.log(this.sent);
-                const result = {...this.sent}
+            if (this.sent.message !== '') {
+                const result = { ...this.sent };
                 console.log(result);
-                this.messages.push(result);
-                console.log(this.messages);
-                this.sent.messages = "";
+                this.contacts[this.curChat].messages.push(result);
+                // console.log(this.contacts[curChat].messages);
+                this.sent.message = '';
+
+                //risposta
+                setTimeout(() => {
+                    const answer = { ...this.received };
+                    console.log(answer);
+                    this.contacts[this.curChat].messages.push(answer);
+                    console.log(this.contacts[this.curChat].messages);
+                }, 1000);
+
             } else {
-                console.log("non ci sono messaggi");
+                console.log('non ci sono messaggi');
             }
         }
     }
-}).mount(".viewport")
+}).mount('.viewport');
 
 

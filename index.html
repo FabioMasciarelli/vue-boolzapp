@@ -118,12 +118,12 @@
                         <div class="absolute">
                             <button><i class="fa-solid fa-chevron-down"></i></button>
                         </div>
-                        <div>{{ curMessage.message }}</div>
+                        <div> {{ curMessage.message }} </div>
                     </span>
                 </div>
                 <footer>
                     <button><i class="fa-regular fa-face-smile size2 g-text"></i></button>
-                    <input type="text" placeholder="Scrivi un messaggio" aria-label="message" class="digit-space" v-model="sent.message" @keyup.enter="send">
+                    <input type="text" placeholder="Scrivi un messaggio" aria-label="message" class="digit-space" v-model.strim="sent.message" @keyup.enter="send">
                     <button><i class="fa-solid fa-microphone size2 g-text"></i></button>
                 </footer>
             </div>
